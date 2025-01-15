@@ -1,0 +1,51 @@
+/* Sidebar Styles */
+.sidebar {
+  position: fixed; /* Keeps the sidebar fixed to the left */
+  top: 90px;           /* Aligns the sidebar to the top */
+  left: 15px;          /* Aligns the sidebar to the left */
+  width: 220px;     /* Set the width of the sidebar /     / Set the height to fill the entire screen */
+  border-radius: 35px;
+  background-color: #E0E0E0;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align the items to the left */
+  z-index: 10; /* Ensure the sidebar stays above the main content */
+  min-height: fit-content;
+}
+.sidebar a{
+  text-decoration: none;
+  outline: none;
+}
+
+.sidebar h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  list-style: none;
+  width: 100%;
+}
+
+.sidebar ul li {
+  outline: none;
+  background-color: #fff;
+  padding: 15px 0;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+  color: #5F5B5B;
+  transition: background-color 0.3s;
+  border-radius: 35px;
+}
+
+.sidebar ul li:hover {
+  background-color: #243642;
+  color: #fff;
+}

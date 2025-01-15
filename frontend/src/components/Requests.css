@@ -1,0 +1,56 @@
+.requests-container {
+    max-width: 800px;
+    margin: auto;
+    /* padding: 20px; */
+    height: 600px; 
+    /* Set a fixed height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    background-color: #fff; /* Add background color if needed */
+}
+
+.requests-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.request-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.request-card h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.request-actions {
+    margin-top: 10px;
+}
+
+.request-actions .btn-accept {
+    background-color: #4caf50;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.request-actions .btn-decline {
+    background-color: #f44336;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.request-actions .btn-accept:hover,
+.request-actions .btn-decline:hover {
+    opacity: 0.9;
+}

@@ -1,0 +1,69 @@
+.actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Ensure buttons wrap on smaller screens */
+}
+
+.actions .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    flex: 1 1 auto; /* Flexible for responsiveness */
+}
+
+.edit{
+    background-color: #e69b00;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    flex: 1 1 auto; /* Flexible for responsiveness */
+}
+
+.actions .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.actions .btn-secondary {
+    background-color: red;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    flex: 1 1 auto;
+}
+
+.actions .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+
+.project-details-container {
+    margin-top: 20px;
+    margin-left: 250px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    justify-items: start;
+    max-width: 600px;
+    /* text-align: left; */
+}
+
+.project-details-card {
+    justify-items: start;
+    justify-content: start ;
+}
+
+.project-details-card p {
+    text-align: left;
+}

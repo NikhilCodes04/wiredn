@@ -1,0 +1,46 @@
+.add-project-container {
+    max-width: 500px;
+    margin: auto;
+    margin-left: 200px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.add-project-form .form-group {
+    margin-bottom: 15px;
+}
+
+.add-project-form input,
+.add-project-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-project-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-project-form button:disabled {
+    background-color: #ccc;
+}
+
+.error {
+    color: red;
+    margin-bottom: 10px;
+}

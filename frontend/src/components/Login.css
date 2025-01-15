@@ -1,0 +1,128 @@
+/* General Reset */
+
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Salsa&display=swap');
+body {
+    background-color: #ffffff;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    overflow: hidden;
+}
+
+/* Semi-circle decorations */
+#semi-circle1 {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 50vh;
+    border-top-right-radius: 50vh;
+    border-bottom-right-radius: 50vh;
+    background-color: #005b96;
+}
+
+#semi-circle2 {
+    position: absolute;
+    z-index: 0;
+    top: -10vh;
+    left: 0;
+    height: 120vh;
+    width: 60vh;
+    border-top-right-radius: 60vh;
+    border-bottom-right-radius: 60vh;
+    background-color: #63ace5;
+}
+
+/* Login box styling */
+.box {
+    z-index: 3; 
+    position: relative;
+    margin-left: 90vh;
+    margin-top: 15vh;
+    /* top: 10vh; */
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Welcome message */
+.box #welcome {
+    font-family: "Salsa", cursive;
+    font-size: 4em;
+    color: black;
+    /* margin-bottom: 1em; */
+}
+
+/* Input fields styling */
+.box input[type="text"],
+.box input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    /* background-color: #f9f9f9; */
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.box input:focus {
+    border-color: #005b96;
+    background-color: #fff;
+    outline: none;
+}
+
+/* Labels */
+.box label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+/* Buttons */
+.box button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    color: white;
+    background-color: #005b96;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1em;
+}
+
+.box button:hover {
+    background-color: #004080;
+}
+
+.box button:active {
+    background-color: #003366;
+}
+
+/* Error handling */
+.box .error-message {
+    color: #ff4d4d;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .box {
+        top: 15vh;
+        padding: 20px 30px;
+    }
+
+    .box #welcome {
+        font-size: 2em;
+    }
+}

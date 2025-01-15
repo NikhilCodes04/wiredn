@@ -1,0 +1,133 @@
+/* General Reset */
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Salsa&display=swap');
+body {
+    background-color: #ffffff;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    overflow: hidden;
+}
+
+/* Semi-circle decorations */
+#semi-circle1 {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100vh; /* Reduced from 100vh */
+    width: 50vh; /* Reduced from 50vh */
+    border-top-right-radius: 50vh; /* Reduced from 50vh */
+    border-bottom-right-radius: 50vh; /* Reduced from 50vh */
+    background-color: #005b96;
+}
+
+#semi-circle2 {
+    position: absolute;
+    z-index: 0;
+    top: -10vh; /* Reduced from -10vh */
+    left: 0;
+    height: 120vh; /* Reduced from 120vh */
+    width: 60vh; /* Reduced from 60vh */
+    border-top-right-radius: 60vh; /* Reduced from 60vh */
+    border-bottom-right-radius: 60vh; /* Reduced from 60vh */
+    background-color: #63ace5;
+}
+
+/* Signup box styling */
+.signup-container {
+    z-index: 3;
+    position: relative;
+    margin: auto;
+    margin-top: 8vh; /* Reduced from 10vh */
+    width: 100%;
+    max-width: 400px; /* Reduced from 500px */
+    background-color: white;
+    border-radius: 16px; /* Reduced from 20px */
+    padding: 24px 32px; /* Reduced from 30px 40px */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Adjusted for smaller size */
+    text-align: center;
+}
+
+/* Heading */
+.signup-container h2 {
+    font-family: "Salsa", cursive;
+    font-size: 2.4em; /* Reduced from 3em */
+    color: black;
+    margin-bottom: 0.8em; /* Reduced from 1em */
+}
+
+/* Input fields styling */
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"],
+.signup-form select {
+    width: 100%;
+    padding: 10px; /* Reduced from 12px */
+    margin-bottom: 0.8em; /* Reduced from 1em */
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Reduced from 8px */
+    font-size: 0.9em; /* Reduced from 1em */
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.signup-form input:focus,
+.signup-form select:focus {
+    border-color: #005b96;
+    background-color: #fff;
+    outline: none;
+}
+
+/* Error and success messages */
+.error-message {
+    color: #ff4d4d;
+    font-size: 0.72em; /* Reduced from 0.9em */
+    margin-bottom: 0.8em; /* Reduced from 1em */
+}
+
+.success-message {
+    color: #28a745;
+    font-size: 0.72em; /* Reduced from 0.9em */
+    margin-bottom: 0.8em; /* Reduced from 1em */
+}
+
+/* Labels */
+.signup-form label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 0.4em; /* Reduced from 0.5em */
+    color: #333;
+}
+
+/* Buttons */
+.signup-form button {
+    width: 100%;
+    padding: 10px; /* Reduced from 12px */
+    font-size: 0.9em; /* Reduced from 1em */
+    color: white;
+    background-color: #005b96;
+    border: none;
+    border-radius: 6px; /* Reduced from 8px */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 0.8em; /* Reduced from 1em */
+}
+
+.signup-form button:hover {
+    background-color: #004080;
+}
+
+.signup-form button:active {
+    background-color: #003366;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .signup-container {
+        padding: 16px 24px; /* Reduced from 20px 30px */
+    }
+
+    .signup-container h2 {
+        font-size: 1.6em; /* Reduced from 2em */
+    }
+}

@@ -1,0 +1,89 @@
+body{
+  margin: 0;
+  font-family: "Poppins";
+}
+p{
+  margin: 0;
+}
+.topbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #243642;
+  width: calc(100%);
+  height: 70px;
+  padding:10px 15px;
+}
+.left-header,.right-header{
+  display: flex; 
+  height: 50px;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+#wired-logo{
+  height: 100%;
+  margin-right: 20px;
+}
+#search-box{
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+#search-button{
+  cursor: pointer;
+  background-color: #E0E0E0;
+  width: 70px;
+  height: 50px;
+  border: none;
+  border-top-left-radius: 35px;
+  border-bottom-left-radius: 35px ;
+  padding:8px;
+  padding-right: 5px;
+  transition: background-color 100ms;
+}
+#search-button:hover{
+  background-color: #E2F1E7;
+}
+#search-button-image{
+  height: 100%;
+  margin: auto;
+}
+#search-input-box{
+  height:100%;
+  width: 700px;
+  border: none;
+  margin: none;
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+  outline: none;
+  padding: 5px 10px
+}
+.right-header{
+  background-color: #e7eff6;
+  border-radius: 35px;
+}
+.right-header img{
+  height: 20px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+#l2,#l3{
+  display: flex; 
+  align-items: center; 
+  padding-right: 15px;
+  padding-left: 15px;
+  cursor: pointer;
+}
+#l2{
+  border-right: 1px solid black;
+}
+#notification-icon{
+  height: 50%;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-right: 0;
+  border-right: 1px solid black;
+}
