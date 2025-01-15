@@ -1,9 +1,15 @@
 // import React from 'react';
 import './Topbar.css';
 import './Dashboard.css';
-// import logo from "../../../public/logo.png"
+// import logo from "../../../public/logo.png";
 
 import {jwtDecode} from "jwt-decode"; // Correct import for jwt-decode
+
+import logo from "../../../public/logo.png";
+import glass from "../../../public/glass.png";
+import notificationHollow from "../../../public/notificationhollow.png";
+import userHollow from "../../../public/userhollow.png";
+import calendar from "../../../public/calendar.png";
 
 function Topbar() {
     let token = localStorage.getItem('token');
@@ -23,18 +29,18 @@ function Topbar() {
     return (
         <div className="topbar">
             <div className="left-header">
-                <img src="../../../public/logo.png" id="wired-logo" alt="Logo" />
+                <img src={logo} id="wired-logo" alt="Logo" />
                 <div id="search-box">
                     <button id="search-button">
-                        <img src="../../../public/glass.png" id="search-button-image" alt="Search" />
+                        <img src={glass} id="search-button-image" alt="Search" />
                     </button>
                     <input type="text" placeholder="search something" id="search-input-box" />
                 </div>
             </div>
             <div className="right-header">
-                <img src="../../../public/notificationhollow.png" id="notification-icon" alt="Notification" />
+                <img src={notificationHollow} id="notification-icon" alt="Notification" />
                 <div id="l2">
-                    <img src="../../../public/userhollow.png" id="user-icon" alt="User" />
+                    <img src={userHollow} id="user-icon" alt="User" />
                     <div style={{ lineHeight: "16px" }}>
                         <p style={{ fontSize: "14px" }}>Hello</p>
                         {/* Use the name from decoded token */}
@@ -44,7 +50,7 @@ function Topbar() {
                     </div>
                 </div>
                 <div id="l3">
-                    <img src="../../../public/calendar.png" alt="Calendar" />
+                    <img src={calendar} alt="Calendar" />
                     <p>{currentDate}</p> {/* Display the current date */}
                 </div>
             </div>
