@@ -13,7 +13,7 @@ const ProjectDetails = () => {
     useEffect(() => {
         const fetchProject = async () => {
             try {
-                const response = await fetch(`http://localhost:8080/api/project/${id}`, {
+                const response = await fetch(`https://wiredn.onrender.com/api/project/${id}`, {
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': `Bearer ${localStorage.getItem('token')}`, // Token from local storage

@@ -14,7 +14,7 @@ const FindMentor = () => {
     useEffect(() => {
         const fetchMentors = async () => {
             try {
-                const mentorResponse = await fetch('http://localhost:8080/api/user/mentors', {
+                const mentorResponse = await fetch('https://wiredn.onrender.com/api/user/mentors', {
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -39,7 +39,7 @@ const FindMentor = () => {
 
     const handleConnect = async (receiverId) => {
         try {
-            const response = await fetch('http://localhost:8080/api/request/send', {
+            const response = await fetch('https://wiredn.onrender.com/api/request/send', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

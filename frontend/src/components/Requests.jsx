@@ -9,7 +9,7 @@ const Requests = () => {
     useEffect(() => {
         const fetchRequests = async () => {
             try {
-                const response = await fetch('http://localhost:8080/api/request/user', {
+                const response = await fetch('https://wiredn.onrender.com/api/request/user', {
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -34,7 +34,7 @@ const Requests = () => {
 
     const handleUpdateStatus = async (requestId, status) => {
         try {
-            const response = await fetch(`http://localhost:8080/api/request/update/${requestId}`, {
+            const response = await fetch(`https://wiredn.onrender.com/api/request/update/${requestId}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',

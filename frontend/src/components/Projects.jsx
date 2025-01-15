@@ -20,7 +20,7 @@ export const Projects = () => {
                     throw new Error('No token found in local storage');
                 }
 
-                const response = await fetch('http://localhost:8080/api/project', {
+                const response = await fetch('https://wiredn.onrender.com/api/project', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',

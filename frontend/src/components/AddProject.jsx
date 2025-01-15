@@ -29,7 +29,7 @@ const AddProject = () => {
         };
 
         try {
-            const response = await fetch('http://localhost:8080/api/project/add', {
+            const response = await fetch('https://wiredn.onrender.com/api/project/add', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

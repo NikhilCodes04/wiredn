@@ -11,7 +11,7 @@ const ViewRequests = () => {
     useEffect(() => {
         const fetchRequests = async () => {
             try {
-                const response = await axios.get("http://localhost:8080/api/requests/user", {
+                const response = await axios.get("https://wiredn.onrender.com/api/requests/user", {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -31,7 +31,7 @@ const ViewRequests = () => {
     const handleRequestAction = async (requestId, status) => {
         try {
             const response = await axios.patch(
-                `http://localhost:8080/api/requests/${requestId}/status`,
+                `https://wiredn.onrender.com/api/requests/${requestId}/status`,
                 { status },
                 {
                     headers: {

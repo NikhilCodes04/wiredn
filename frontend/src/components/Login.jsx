@@ -12,7 +12,7 @@ export const LogIn = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:8080/api/auth/login", { email, password });
+            const response = await axios.post("https://wiredn.onrender.com/api/auth/login", { email, password });
 
             // Store the token in localStorage
             localStorage.setItem("token", response.data.token);

@@ -17,7 +17,7 @@ const FindTeammates = () => {
         const fetchData = async () => {
             try {
                 // Fetch project details to get the name
-                const projectResponse = await fetch(`http://localhost:8080/api/project/${projectId}`, {
+                const projectResponse = await fetch(`https://wiredn.onrender.com/api/project/${projectId}`, {
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -32,7 +32,7 @@ const FindTeammates = () => {
                 setProjectName(projectData.project.name); // Set the project name
 
                 // Fetch students
-                const studentResponse = await fetch('http://localhost:8080/api/user/students', {
+                const studentResponse = await fetch('https://wiredn.onrender.com/api/user/students', {
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -60,7 +60,7 @@ const FindTeammates = () => {
 
     const handleConnect = async (receiverId) => {
         try {
-            const response = await fetch('http://localhost:8080/api/request/send', {
+            const response = await fetch('https://wiredn.onrender.com/api/request/send', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

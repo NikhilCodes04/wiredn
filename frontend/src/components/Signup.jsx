@@ -39,7 +39,7 @@ const Signup = () => {
         setError('');
         setSuccess('');
         try {
-            const response = await axios.post('http://localhost:8080/api/auth/register', formData);
+            const response = await axios.post('https://wiredn.onrender.com/api/auth/register', formData);
 
             // On success, save the token (if provided)
             if (response.data.token) {

@@ -15,8 +15,13 @@ const app = express();
 
 // Serve static files from the "public" directory
 const _dirname = path.resolve();
+
 // Enable CORS middleware
-app.use(cors());
+const corsOptions = {
+    origin:"https://wiredn.onrender.com",
+    credentials: true,
+}
+app.use(cors(corsOptions));
 
 // Connect to the database
 dbConnect();
