@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './Requests.css';
-
+import config from "../apiConfig"; 
 const Requests = () => {
     const [requests, setRequests] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -9,7 +9,7 @@ const Requests = () => {
     useEffect(() => {
         const fetchRequests = async () => {
             try {
-                const response = await fetch('https://wiredn.onrender.com/api/request/user', {
+                const response = await fetch(`${config.baseURL}/api/request/user`, {
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -34,7 +34,7 @@ const Requests = () => {
 
     const handleUpdateStatus = async (requestId, status) => {
         try {
-            const response = await fetch(`https://wiredn.onrender.com/api/request/update/${requestId}`, {
+            const response = await fetch(`${config.baseURL}/api/request/update/${requestId}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',

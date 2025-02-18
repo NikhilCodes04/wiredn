@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 // import Sidebar from './Dashboard/Sidebar';
 import './FindTeammates.css';
-
+import config from "../apiConfig"; 
 const FindMentor = () => {
     const { projectId } = useParams();
     const [mentors, setMentors] = useState([]);
@@ -14,7 +14,7 @@ const FindMentor = () => {
     useEffect(() => {
         const fetchMentors = async () => {
             try {
-                const mentorResponse = await fetch('https://wiredn.onrender.com/api/user/mentors', {
+                const mentorResponse = await fetch(`${config.baseURL}/api/user/mentors`, {
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -39,7 +39,7 @@ const FindMentor = () => {
 
     const handleConnect = async (receiverId) => {
         try {
-            const response = await fetch('https://wiredn.onrender.com/api/request/send', {
+            const response = await fetch('${config.baseURL}/api/request/send', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

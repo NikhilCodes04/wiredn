@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 // import Sidebar from './Dashboard/Sidebar';
 import './ProjectDetails.css'; // Import CSS for styling
-
+import config from "../apiConfig"; 
 const ProjectDetails = () => {
     const { id } = useParams(); // Get project ID from URL
     const navigate = useNavigate(); // For navigation
@@ -13,7 +13,7 @@ const ProjectDetails = () => {
     useEffect(() => {
         const fetchProject = async () => {
             try {
-                const response = await fetch(`https://wiredn.onrender.com/api/project/${id}`, {
+                const response = await fetch(`${config.baseURL}/api/project/${id}`, {
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': `Bearer ${localStorage.getItem('token')}`, // Token from local storage

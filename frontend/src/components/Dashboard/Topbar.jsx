@@ -10,6 +10,7 @@ import glass from "../../../public/glass.png";
 import notificationHollow from "../../../public/notificationhollow.png";
 import userHollow from "../../../public/userhollow.png";
 import calendar from "../../../public/calendar.png";
+import {useNavigate} from "react-router-dom";
 
 function Topbar() {
     let token = localStorage.getItem('token');
@@ -18,6 +19,8 @@ function Topbar() {
     if (token) {
         decoded = jwtDecode(token);
     }
+
+    const navigate = useNavigate();
     //console.log(decoded);
 
     // Get current date in "dd Month" format
@@ -25,6 +28,12 @@ function Topbar() {
         day: "numeric",
         month: "long",
     }).format(new Date());
+
+    const handleLogout = () => {
+        localStorage.removeItem('token'); // Clear token
+        localStorage.removeItem('role'); // Clear role (if stored)
+        navigate('/login'); // Redirect to login page
+    };
 
     return (
         <div className="topbar">
@@ -53,6 +62,9 @@ function Topbar() {
                     <img src={calendar} alt="Calendar" />
                     <p>{currentDate}</p> {/* Display the current date */}
                 </div>
+                <button id="logout-button" onClick={handleLogout}>
+                Logout
+                </button>
             </div>
         </div>
     );

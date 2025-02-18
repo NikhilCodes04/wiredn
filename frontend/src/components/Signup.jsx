@@ -2,7 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './Signup.css'; // Import the CSS file
-
+import config from "../apiConfig"; 
 const Signup = () => {
     const [formData, setFormData] = useState({
         name: '',
@@ -39,7 +39,7 @@ const Signup = () => {
         setError('');
         setSuccess('');
         try {
-            const response = await axios.post('https://wiredn.onrender.com/api/auth/register', formData);
+            const response = await axios.post(`${config.baseURL}/api/auth/register`, formData);
 
             // On success, save the token (if provided)
             if (response.data.token) {

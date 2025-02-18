@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./ViewRequests.css";
-
+import config from "../apiConfig"; 
 const ViewRequests = () => {
     const [requests, setRequests] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -11,7 +11,7 @@ const ViewRequests = () => {
     useEffect(() => {
         const fetchRequests = async () => {
             try {
-                const response = await axios.get("https://wiredn.onrender.com/api/requests/user", {
+                const response = await axios.get(`${config.baseURL}/api/requests/user`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -31,7 +31,7 @@ const ViewRequests = () => {
     const handleRequestAction = async (requestId, status) => {
         try {
             const response = await axios.patch(
-                `https://wiredn.onrender.com/api/requests/${requestId}/status`,
+                `${config.baseURL}/api/requests/${requestId}/status`,
                 { status },
                 {
                     headers: {

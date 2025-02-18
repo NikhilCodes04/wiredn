@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'; // Import useNavigate for naviga
 import './Projects.css';
 import Sidebar from './Dashboard/Sidebar';
 import Topbar from './Dashboard/Topbar';
-
+import config from "../apiConfig"; 
 export const Projects = () => {
     const [projects, setProjects] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
@@ -20,7 +20,7 @@ export const Projects = () => {
                     throw new Error('No token found in local storage');
                 }
 
-                const response = await fetch('https://wiredn.onrender.com/api/project', {
+                const response = await fetch(`${config.baseURL}/api/project`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',

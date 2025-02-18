@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import {jwtDecode} from "jwt-decode"; // Correcting import syntax for jwt-decode
-import "./Login.css"; // Ensure your styles are correctly imported
+import {jwtDecode} from "jwt-decode"; // Correct import for jwt-decode
+import "./Login.css"; 
+import config from "../apiConfig";  // Import the config
 
 export const LogIn = () => {
     const [email, setEmail] = useState("");
@@ -12,7 +13,7 @@ export const LogIn = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("https://wiredn.onrender.com/api/auth/login", { email, password });
+            const response = await axios.post(`${config.baseURL}/api/auth/login`, { email, password });
 
             // Store the token in localStorage
             localStorage.setItem("token", response.data.token);
@@ -23,9 +24,6 @@ export const LogIn = () => {
 
             // Store the user role in localStorage
             localStorage.setItem("role", userRole);
-
-            //console.log("Logged in successfully:", response.data);
-            //console.log("User role:", userRole);
 
             // Navigate to the dashboard after successful login
             navigate("/dashboard");

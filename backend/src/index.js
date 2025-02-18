@@ -18,7 +18,7 @@ const _dirname = path.resolve();
 
 // Enable CORS middleware
 const corsOptions = {
-    origin:"https://wiredn.onrender.com",
+    origin:["https://wiredn.onrender.com","http://localhost:8080"],
     credentials: true,
 }
 app.use(cors(corsOptions));

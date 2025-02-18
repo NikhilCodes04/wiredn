@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './FindTeammates.css';
 import './FindMentor.css';
-
+import config from "../apiConfig"; 
 const FindTeammates = () => {
     const { projectId } = useParams();
     const [students, setStudents] = useState([]);
@@ -17,7 +17,7 @@ const FindTeammates = () => {
         const fetchData = async () => {
             try {
                 // Fetch project details to get the name
-                const projectResponse = await fetch(`https://wiredn.onrender.com/api/project/${projectId}`, {
+                const projectResponse = await fetch(`${config.baseURL}/api/project/${projectId}`, {
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -32,7 +32,7 @@ const FindTeammates = () => {
                 setProjectName(projectData.project.name); // Set the project name
 
                 // Fetch students
-                const studentResponse = await fetch('https://wiredn.onrender.com/api/user/students', {
+                const studentResponse = await fetch('${config.baseURL}/api/user/students', {
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -60,7 +60,7 @@ const FindTeammates = () => {
 
     const handleConnect = async (receiverId) => {
         try {
-            const response = await fetch('https://wiredn.onrender.com/api/request/send', {
+            const response = await fetch('${config.baseURL}/api/request/send', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
